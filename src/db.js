@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-console.log("test1git");
-
 //.env에 접근하기 위해 사용
 dotenv.config();
 
