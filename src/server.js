@@ -22,7 +22,7 @@ app.post("/signUp", async (req, res) => {
         if (isUser) {
             isUser.save();
 
-            res.redirect("http://localhost:3000/SignIn");
+            res.redirect("https://goncstudio.netlify.app/#/SignIn");
         } else {
             const newUser = await User.create({
                 jobCategory,
@@ -35,9 +35,9 @@ app.post("/signUp", async (req, res) => {
             console.log(isUser);
             console.log("newUser", newUser);
             if (isUser || isUser) {
-                res.redirect("http://localhost:3000/SignUpSuccess");
+                res.redirect("https://goncstudio.netlify.app/#/SignUpSuccess");
             } else {
-                res.redirect("http://localhost:3000/SignUpFail");
+                res.redirect("https://goncstudio.netlify.app/#/SignUpFail");
             }
         }
 
