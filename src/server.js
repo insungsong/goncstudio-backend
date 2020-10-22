@@ -21,7 +21,6 @@ app.post("/signUp", async (req, res) => {
         const isUser = await User.findOne({ email });
         if (isUser) {
             isUser.save();
-
             res.redirect("https://goncstudio.netlify.app/#/SignIn");
         } else {
             const newUser = await User.create({
@@ -34,7 +33,7 @@ app.post("/signUp", async (req, res) => {
             })
             console.log(isUser);
             console.log("newUser", newUser);
-            if (isUser || isUser) {
+            if (newUser) {
                 res.redirect("https://goncstudio.netlify.app/#/SignUpSuccess");
             } else {
                 res.redirect("https://goncstudio.netlify.app/#/SignUpFail");
